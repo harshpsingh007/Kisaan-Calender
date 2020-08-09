@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Homepage</title>
+    {% load static %}
+    <link rel="icon" type="image/png" href="{%static 'anuj/farmer.png'%}">
+</head>
+
+<body>
+    {% load static %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <a class="navbar-brand" href="/"><b>किसान सहायता</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/"><img src="{%static 'anuj/webhome.png'%}">मेनू पेज <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/"><img src="{%static 'anuj/workteam.png'%}">हमारे बारे में</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact/contact/"><img src="{%static 'anuj/customerreviews.png'%}">सम्पर्क करें</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container" style="width:600px;">
+         <div class="p-3 mb-2 bg-success text-white">
+        <h1>HELLO AND WELCOME TO ABOUT US</h1>
+    </div>
+    {% load static %}
+    <img src="{%static 'anuj/aboutus.jpg'%}" class="img-fluid" alt="Responsive image">
+    <div class=" mt-2 p-3 mb-2 bg-dark text-white">
+        <h4>Introduction of website : </h4>
+    </div>
+    <p>
+        Ecom Private Limited, d/b/a Ecom is an Indian e-commerce company based in Saindwar, India. It was founded by Harsh Pratap Singh. in 2019. The company initially focused on book sales, before expanding into other product categories such as consumer electronics, fashion, and lifestyle products.
+        As of oct 2019, Ecom held a 39.5% market share of India's e-commerce industry.Ecom is significantly dominant in the sale of apparel (a position that was bolstered by its acquisitions of Myntra and Jabong.com), and was described as being "neck and neck" with Amazon in the sale of electronics and mobile phones.Ecomalso owns PhonePe, a mobile payments service based on the Unified Payments Interface (UPI).
+        In August 2018, U.S.-based retail chain Walmart acquired a 77% controlling stake in Ecom for US$16 billion, valuing it at $20 billion.<br>
+        <div class=" mt-2 p-3 mb-2 bg-dark text-white">
+            <h4>Introduction of Developer : </h4>
+        </div>
+        <p>
+            This website is created by Harsh Pratap Singh.<br>
+            The framework used in this website is Django.<br>
+            This website is made with many languages like PYTHON,CSS,JAVASCRIPT,HTML.<br>
+        </p>
+        <div class="container mr-auto">{% load static %}<img src="{%static 'anuj/thankyou.jpg'%}" class="img-fluid" width="400" height="200" alt="Responsive image"></div>
+    </p>
+</div>
+</body>
+
+</html>

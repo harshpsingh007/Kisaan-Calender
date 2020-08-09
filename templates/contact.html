@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Homepage</title>
+    {% load static %}
+    <link rel="icon" type="image/png" href="{%static 'anuj/farmer.png'%}">
+</head>
+
+<body>
+    {% load static %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <a class="navbar-brand" href="/"><b>किसान सहायता</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/"><img src="{%static 'anuj/webhome.png'%}">मेनू पेज <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/"><img src="{%static 'anuj/workteam.png'%}">हमारे बारे में</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact/"><img src="{%static 'anuj/customerreviews.png'%}">सम्पर्क करें</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class='container'>
+    <form action="/contact/contact/" method="post">{% csrf_token %}
+        <div class="form-group">
+            <label for="name">Enter Your Name</label>
+            <input type="name" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Enter Your E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="abcd@xyz.com" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Enter Your Name</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone no." required>
+        </div>
+        <div class="form-group">
+            <label for="desc">Enter Your Query Here:</label>
+            <textarea class="form-control" id="desc" name="desc" rows="5" required></textarea>
+        </div>
+        <!-- Trigger the modal with a button -->
+        <button type="submit" class="btn btn-info btn-lg">submit</button>
+    </form>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Homepage</title>
+    {% load static %}
+    <link rel="icon" type="image/png" href="{%static 'anuj/farmer.png'%}">
+    <style>
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+</style>
+</head>
+
+<body>
+    <div class="text-right mr-5 mt-1">
+        <input class="btn btn-dark" type="submit" value="Print" onclick="myFunction()">
+        <a href="/">Back to home</a>
+    </div>
+    {% load static %}
+    <img id="images" align="left" style="width:1225px;height:1700px">
+    <div class="top-left mt-5 mx-5"><h5>Grower UGC Code :<b><span id="kisanid"></span></b></h5></div>
+    </div>
+</body>
+
+</html>
+{% comment %} <script>
+function myFunction() {
+  alert("Please don't refresh this page !!");
+}
+myFunction();
+</script> {% endcomment %}
+<script>
+var hello= localStorage.getItem("ddvalue");
+document.getElementById('kisanid').innerHTML=localStorage.getItem('ddvalue')
+var a = "https://rrovolis.sirv.com/"+ hello +".jpg"
+console.log(hello)
+document.getElementById('images').setAttribute("src",a)
+</script>
+<script>
+function myFunction() {
+  window.print();
+}
+</script>
